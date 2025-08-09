@@ -99,6 +99,7 @@ function toMonthly(cost, cycle) {
         case 'Weekly': return cost * 52 / 12;
         case 'Monthly': return cost;
         case 'Quarterly': return cost / 3;
+        case 'Six-Monthly': return cost / 6;
         case 'Annual': return cost / 12;
         default: return cost;
     }

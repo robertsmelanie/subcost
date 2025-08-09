@@ -7,6 +7,92 @@
 </head>
 <body>
     <h1>Subscription Cost Analyzer</h1>
+    <div class="container">
+        <header>
+            <div>
+                <div class="title">💸 Subscription Cost Analyzer</div>
+                <div class="sub">Track recurring costs, view monthly/annual totals, and find quick savings.</div>
+            </div>
+            <div class="controls">
+                <button class="primary" id="addRowBtn">＋ Add subscription</button>
+                <button class="ghost" id="exportBtn">⬇︎ Export</button>
+                <button class="ghost" id="importBtn">⬆︎ Import</button>
+                <input type="file" id="importFile" accept="application/json" class="hidden" />
+                <button class="ghost" id="resetBtn" title="Clear all data">🗑 Reset</button>
+            </div>
+        </header>
     
+        <section class="grid grid-2">
+            <div class="left panel" style="padding:16px">
+                <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:8px">
+                    <div class="badge">Data saved locally • <span id="saveState">Idle</span></div>
+                    <div style="display:flex;gap:8px;align-items:center">
+                        <label class="muted" for="currency">Currency</label>
+                        <select id="currency" class="input" style="width:auto">
+                            <option value="$">$ USD</option>
+                            <option value="€">€ EUR</option>
+                            <option value="£">£ GBP</option>
+                            <option value="₹">₹ INR</option>
+                            <option value="¥">¥ JPY</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div style="overflow:auto">
+                    <table id="subsTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Cost</th>
+                                <th>Cycle</th>
+                                <th>Category</th>
+                                <th>Started</th>
+                                <th>Notes</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody"></tbody>
+                    </table>
+                </div>
+    
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+                    <div class="muted">Tip: Use <span class="kbd">Tab</span> to move across fields • <span
+                            class="kbd">⌘/Ctrl</span> + <span class="kbd">S</span> to save</div>
+                    <div class="chip">What‑if increase % <input id="whatIf" class="table-input" type="number" min="0"
+                            step="1" style="width:90px" value="0"></div>
+                </div>
+            </div>
+    
+            <div class="right panel">
+                <aside>
+                    <div class="totals">
+                        <div class="total-card">
+                            <h3>Monthly total</h3>
+                            <div class="val" id="monthlyTotal">$0.00</div>
+                        </div>
+                        <div class="total-card">
+                            <h3>Annual total</h3>
+                            <div class="val" id="annualTotal">$0.00</div>
+                        </div>
+                        <div class="total-card">
+                            <h3>Active subs</h3>
+                            <div class="val" id="activeCount">0</div>
+                        </div>
+                    </div>
+                    <div style="margin:16px 0 6px 0;display:flex;align-items:center;justify-content:space-between">
+                        <div class="muted">Category breakdown</div>
+                        <button id="findSavings" class="primary">Find quick savings</button>
+                    </div>
+                    <canvas id="catChart" height="220"></canvas>
+    
+                    <div id="suggestions" style="margin-top:14px" class="muted"></div>
+                </aside>
+            </div>
+        </section>
+    
+        <p class="footer">Made with ❤️ — No data leaves your browser. | <a class="link" href="#" id="downloadCSV">Export
+                CSV</a></p>
+    </div>
+
 </body>
 </html>

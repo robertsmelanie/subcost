@@ -164,7 +164,8 @@
   .total-card {
       padding: 16px;
       border-radius: 14px;
-      background: #0b1223;
+      /* background: #0b1223; */
+      background: white;
       border: 1px solid #1f2937
   }
 

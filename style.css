@@ -1,0 +1,239 @@
+  * {
+      box-sizing: border-box
+  }
+
+  html,
+  body {
+      height: 100%
+  }
+
+  body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(120deg, #0b1223, #0f172a 40%, #0b1223);
+      color: var(--text)
+  }
+
+  .container {
+      max-width: 1100px;
+      margin: 32px auto;
+      padding: 0 16px
+  }
+
+  header {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px
+  }
+
+  .title {
+      font-weight: 800;
+      letter-spacing: .2px;
+      font-size: clamp(20px, 3vw, 28px)
+  }
+
+  .sub {
+      color: var(--muted);
+      font-size: 14px
+  }
+
+  .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, .35)
+  }
+
+  .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+  }
+
+  button,
+  select,
+  input,
+  textarea {
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #0b1223;
+      color: var(--text)
+  }
+
+  button {
+      padding: 10px 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: .15s ease;
+      border-color: #1f2937
+  }
+
+  button:hover {
+      transform: translateY(-1px)
+  }
+
+  .primary {
+      background: linear-gradient(90deg, #22c55e, #16a34a);
+      border: 0
+  }
+
+  .ghost {
+      background: transparent
+  }
+
+  .danger {
+      background: linear-gradient(90deg, #ef4444, #b91c1c);
+      border: 0
+  }
+
+  .grid {
+      display: grid;
+      gap: 16px
+  }
+
+  .grid-2 {
+      grid-template-columns: 1.3fr .7fr
+  }
+
+  @media (max-width: 900px) {
+      .grid-2 {
+          grid-template-columns: 1fr
+      }
+  }
+
+  table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 8px
+  }
+
+  th,
+  td {
+      padding: 12px;
+      border-bottom: 1px dashed #1f2937
+  }
+
+  th {
+      color: var(--muted);
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600
+  }
+
+  td {
+      vertical-align: middle
+  }
+
+  tr {
+      background: #0b1223
+  }
+
+  tr:hover {
+      background: #0e1528
+  }
+
+  .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: #0e1a33;
+      color: var(--muted);
+      border: 1px solid #1f2a4a
+  }
+
+  .totals {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px
+  }
+
+  @media (max-width:700px) {
+      .totals {
+          grid-template-columns: 1fr
+      }
+  }
+
+  .total-card {
+      padding: 16px;
+      border-radius: 14px;
+      background: #0b1223;
+      border: 1px solid #1f2937
+  }
+
+  .total-card h3 {
+      margin: 0 0 6px 0;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600
+  }
+
+  .total-card .val {
+      font-size: 24px;
+      font-weight: 800
+  }
+
+  .right aside {
+      padding: 16px
+  }
+
+  .muted {
+      color: var(--muted)
+  }
+
+  .row-actions {
+      display: flex;
+      gap: 6px
+  }
+
+  .input {
+      width: 100%;
+      padding: 10px
+  }
+
+  .table-input {
+      width: 100%;
+      padding: 8px;
+      background: #0b1223;
+      border: 1px solid #1f2937;
+      border-radius: 8px;
+      color: var(--text)
+  }
+
+  .kbd {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-bottom-width: 3px;
+      border-radius: 8px;
+      padding: 2px 6px;
+      font-weight: 700
+  }
+
+  .footer {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+      margin-top: 20px
+  }
+
+  .link {
+      color: #93c5fd;
+      text-decoration: none
+  }
+
+  .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border: 1px solid #1f2937;
+      border-radius: 999px
+  }
+
+  .hidden {
+      display: none
+  }

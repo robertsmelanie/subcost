@@ -59,7 +59,8 @@
   textarea {
       border-radius: 10px;
       border: 1px solid var(--border);
-      background: #0b1223;
+      /* background: #0b1223; */
+      background: grey;
       color: var(--text)
   }
 

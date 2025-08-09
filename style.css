@@ -11,7 +11,8 @@
       margin: 0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       background: linear-gradient(120deg, #0b1223, #0f172a 40%, #0b1223);
-      color: var(--text)
+      color: var(--text);
+      background: cadetblue;
   }
 
   .container {

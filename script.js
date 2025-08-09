@@ -59,7 +59,7 @@ function rowEl(row) {
         <td><input type="number" step="0.01" class="table-input" value="${row.cost}" data-k="cost"/></td>
         <td>
           <select class="table-input" data-k="cycle">
-            ${['Weekly', 'Monthly', 'Quarterly', 'Annual'].map(c => `<option ${row.cycle === c ? 'selected' : ''}>${c}</option>`).join('')}
+            ${['Weekly', 'Monthly', 'Quarterly', 'Six-Monthly', 'Annual'].map(c => `<option ${row.cycle === c ? 'selected' : ''}>${c}</option>`).join('')}
           </select>
         </td>
         <td>

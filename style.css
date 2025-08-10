@@ -7,7 +7,7 @@
       height: 100%
   }
 
-  body {
+  body{
       margin: 0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       background: linear-gradient(120deg, #0b1223, #0f172a 40%, #0b1223);
@@ -21,7 +21,7 @@
       padding: 0 16px
   }
 
-  header {
+  header, h1 {
       display: flex;
       gap: 16px;
       align-items: center;

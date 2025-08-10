@@ -68,7 +68,7 @@ function rowEl(row) {
           </select>
         </td>
         <td><input type="date" class="table-input" value="${row.start || ''}" data-k="start"/></td>
-        <td><input class="table-input" value="${row.notes || ''}" data-k="notes" placeholder="family plan, student, etc"/></td>
+        
         <td class="row-actions">
           <button title="Duplicate" data-act="dup">⎘</button>
           <button class="danger" title="Delete" data-act="del">✕</button>
